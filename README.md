@@ -7,13 +7,9 @@ CuriousCasa is an AI-powered, multi-agent chatbot designed to streamline real es
 ## 🚀 Features
 
 -   🤖 **Auto Agent Detection**: Smart classification based on text and image input
-
 -   🛠️ **Issue Diagnosis Agent**: Detects problems (e.g. broken appliances, leaks) and offers troubleshooting suggestions
-
 -   📷 **Image Analysis Agent**: Understands images using multimodal models for visual issue identification
-
 -   📘 **Tenancy FAQ Agent**: Retrieves legal and practical information from tenancy knowledge base
-
 
 ---
 
@@ -74,48 +70,59 @@ project-root/
 ### 🔧 Prerequisites
 
 -   Python 3.9+
-
 -   Node.js (v18+ recommended)
-
 -   HuggingFace API Keys (for image & text agents)
-
 -   ImgBB API Key (for hosting image uploads)
 
+### 📦 Install Dependencies
 
-### 📁 How to Run the Project
+**Backend - Agent 1**
+```bash
+cd backend/agent_1
+pip install fastapi uvicorn requests huggingface_hub
+```
 
-1.  Open the project folder in any code editor (e.g., **VS Code**).
+**Backend - Agent 2**
+```bash
+cd backend/agent_2
+pip install fastapi uvicorn numpy
+```
 
-2.  Press  ``Ctrl + ` `` to open the integrated terminal.
+**Backend - Agent 3**
+```bash
+cd backend/agent_3
+pip install fastapi uvicorn requests
+```
 
-3.  Split the terminal into **4 panels**.
+**Frontend**
+```bash
+cd frontend
+npm install
+```
 
-4.  Run the following commands in each terminal respectively:
+### ▶️ Run the Project
 
+Open the project in VS Code. Open 4 terminals ``Ctrl + ` ``, and in each terminal run the following commands:
 
-**Terminal 1**:
-
+**Terminal 1**
 ```bash
 cd backend/agent_1
 python agent_1_api.py
 ```
 
-**Terminal 2**:
-
+**Terminal 2**
 ```bash
 cd backend/agent_2
 python agent_2_api.py
 ```
 
-**Terminal 3**:
-
+**Terminal 3**
 ```bash
 cd backend/agent_3
 python agent_3_api.py
 ```
 
-**Terminal 4**:
-
+**Terminal 4**
 ```bash
 cd frontend
 npm start
@@ -150,13 +157,9 @@ For the full text, refer to [LICENSE](https://opensource.org/licenses/MIT).
 ## 🙌 Acknowledgements
 
 -   [Qwen2.5-VL-7B by Alibaba Group](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct)
-
 -   [Mixtral-8x7B by Mistral AI](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1)
-
 -   HuggingFace Inference APIs
-
 -   ImgBB for image hosting
-
 
 ---
 
